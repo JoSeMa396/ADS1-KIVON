@@ -1,0 +1,34 @@
+C:\maria\ads1-2017-2\Herencia\Herencia\bin\Debug\Herencia.exe.config
+C:\maria\ads1-2017-2\Herencia\Herencia\bin\Debug\Herencia.exe
+C:\maria\ads1-2017-2\Herencia\Herencia\bin\Debug\Herencia.pdb
+C:\maria\ads1-2017-2\Herencia\Herencia\obj\Debug\Herencia.csprojResolveAssemblyReference.cache
+C:\maria\ads1-2017-2\Herencia\Herencia\obj\Debug\Herencia.Properties.Resources.resources
+C:\maria\ads1-2017-2\Herencia\Herencia\obj\Debug\Herencia.csproj.GenerateResource.Cache
+C:\maria\ads1-2017-2\Herencia\Herencia\obj\Debug\Herencia.exe
+C:\maria\ads1-2017-2\Herencia\Herencia\obj\Debug\Herencia.pdb
+c:\maria\ads1-2017-2\Herencia\Herencia\bin\Debug\MySql.Data.dll
+c:\maria\ads1-2017-2\Herencia\Herencia\bin\Debug\MySql.Data.xml
+c:\maria\ads1-2017-2\Herencia\Herencia\obj\Debug\Herencia.Form1.resources
+C:\maria\ads1-2017-2\Herencia\Herencia\obj\Debug\Herencia.IUUsuario.resources
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ProyectoCOmpartido\Herencia\Herencia\bin\Debug\Herencia.exe.config
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ProyectoCOmpartido\Herencia\Herencia\obj\Debug\Herencia.exe
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ProyectoCOmpartido\Herencia\Herencia\obj\Debug\Herencia.pdb
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ProyectoCOmpartido\Herencia\Herencia\bin\Debug\Herencia.exe
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ProyectoCOmpartido\Herencia\Herencia\bin\Debug\Herencia.pdb
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ProyectoCOmpartido\Herencia\Herencia\bin\Debug\MySql.Data.xml
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ProyectoCOmpartido\Herencia\Herencia\obj\Debug\Herencia.csprojResolveAssemblyReference.cache
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ProyectoCOmpartido\Herencia\Herencia\obj\Debug\Herencia.Form1.resources
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ProyectoCOmpartido\Herencia\Herencia\obj\Debug\Herencia.IUUsuario.resources
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ProyectoCOmpartido\Herencia\Herencia\obj\Debug\Herencia.Properties.Resources.resources
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ProyectoCOmpartido\Herencia\Herencia\obj\Debug\Herencia.csproj.GenerateResource.Cache
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\bin\Debug\Herencia.exe.config
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.exe
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.pdb
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\bin\Debug\Herencia.exe
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\bin\Debug\Herencia.pdb
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\bin\Debug\MySql.Data.xml
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.csprojResolveAssemblyReference.cache
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.Form1.resources
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.IUUsuario.resources
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.Properties.Resources.resources
+C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.csproj.GenerateResource.Cache

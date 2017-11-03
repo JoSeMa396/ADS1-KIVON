@@ -1,0 +1,81 @@
+DROP DATABASE IF EXISTS kivon;
+CREATE DATABASE kivon;
+USE kivon
+
+-- Crear tabla rol
+CREATE TABLE rol(
+idRol INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nombreRol VARCHAR(20) NOT NULL
+) ENGINE=InnoDB;
+
+-- Crear tabla sucursal
+CREATE TABLE sucursal(
+idSucursal INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nit VARCHAR(20) UNIQUE NOT NULL,
+nombreEmpresa VARCHAR(30) NOT NULL,
+numeroSucursal INT UNIQUE NOT NULL,
+numeroAutorizacion VARCHAR(15) NOT NULL,
+direccion VARCHAR(50) NOT NULL
+) ENGINE=InnoDB;
+
+-- Crear tabla cliente
+CREATE TABLE cliente(
+idCliente INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+idSucursal INT UNSIGNED NOT NULL,
+ci VARCHAR(15) UNIQUE NOT NULL,
+lugarExpedicion VARCHAR(15) NOT NULL,
+nit VARCHAR(20) UNIQUE NOT NULL,
+primerNombre VARCHAR(20) NOT NULL,
+segundoNombre VARCHAR(20),
+apellidoPaterno VARCHAR(20) NOT NULL,
+apellidoMaterno VARCHAR(20),
+FOREIGN KEY(idSucursal) REFERENCES sucursal(idSucursal) ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+
+-- Crear tabla usuario
+CREATE TABLE usuario(
+idUsuario INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+idRol INT UNSIGNED NOT NULL,
+idSucursal INT UNSIGNED NOT NULL,
+ci VARCHAR(12) UNIQUE NOT NULL,
+lugarExpedicion VARCHAR(15) NOT NULL,
+primerNombre VARCHAR(20) NOT NULL,
+segundoNombre VARCHAR(20),
+apellidoPaterno VARCHAR(20) NOT NULL,
+apellidoMaterno VARCHAR(20),
+fechaNacimiento DATE NOT NULL,
+numeroCelular INT NOT NULL,
+login VARCHAR(20) UNIQUE NOT NULL,
+password VARCHAR(20) NOT NULL,
+activo boolean NOT NULL,
+fotografia VARCHAR(30),
+FOREIGN KEY(idRol) REFERENCES rol(idRol) ON UPDATE CASCADE ON DELETE CASCADE,
+FOREIGN KEY(idSucursal) REFERENCES sucursal(idSucursal) ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+
+
+-- Crear tabla referencia de usuario
+CREATE TABLE referenciaUsuario(
+idReferenciaUsuario INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+idUsuario INT UNSIGNED NOT NULL,
+ci VARCHAR(12) UNIQUE NOT NULL,
+lugarExpedicion VARCHAR(15) NOT NULL,
+primerNombre VARCHAR(20) NOT NULL,
+segundoNombre VARCHAR(20),
+apellidoPaterno VARCHAR(20) NOT NULL,
+apellidoMaterno VARCHAR(20),
+fechaNacimiento DATE NOT NULL,
+numeroCelular INT NOT NULL,
+fotografiaCarnet VARCHAR(30),
+FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario) ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+
+
+
+
+
+
+
