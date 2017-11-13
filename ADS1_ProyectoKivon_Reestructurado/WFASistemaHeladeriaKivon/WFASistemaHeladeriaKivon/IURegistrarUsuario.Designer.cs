@@ -1,6 +1,6 @@
 ﻿namespace WFASistemaHeladeriaKivon
 {
-    partial class IUUsuario
+    partial class IURegistrarUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.gpbListaUsuarios = new System.Windows.Forms.GroupBox();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtgListaUsuarios = new System.Windows.Forms.DataGridView();
             this.gpbRegistrarUsuario = new System.Windows.Forms.GroupBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.picBoxFotoUser = new System.Windows.Forms.PictureBox();
             this.btnBuscarFoto = new System.Windows.Forms.Button();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
@@ -70,18 +77,75 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gpbListaUsuarios = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dtgListaUsuarios = new System.Windows.Forms.DataGridView();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.gpbRegistrarUsuario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxFotoUser)).BeginInit();
             this.gpbListaUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaUsuarios)).BeginInit();
+            this.gpbRegistrarUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFotoUser)).BeginInit();
             this.SuspendLayout();
+            //
+            // openFileDialog1
+            //
+            this.openFileDialog1.FileName = "openFileDialog1";
+            //
+            // gpbListaUsuarios
+            //
+            this.gpbListaUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gpbListaUsuarios.Controls.Add(this.btnModificar);
+            this.gpbListaUsuarios.Controls.Add(this.btnBuscar);
+            this.gpbListaUsuarios.Controls.Add(this.textBox1);
+            this.gpbListaUsuarios.Controls.Add(this.dtgListaUsuarios);
+            this.gpbListaUsuarios.Location = new System.Drawing.Point(12, 366);
+            this.gpbListaUsuarios.Name = "gpbListaUsuarios";
+            this.gpbListaUsuarios.Size = new System.Drawing.Size(943, 349);
+            this.gpbListaUsuarios.TabIndex = 6;
+            this.gpbListaUsuarios.TabStop = false;
+            this.gpbListaUsuarios.Text = "Lista de Usuarios";
+            //
+            // btnModificar
+            //
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificar.Location = new System.Drawing.Point(805, 110);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            //
+            // btnBuscar
+            //
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.Location = new System.Drawing.Point(781, 30);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(129, 23);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            //
+            // textBox1
+            //
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(31, 32);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(733, 20);
+            this.textBox1.TabIndex = 1;
+            //
+            // dtgListaUsuarios
+            //
+            this.dtgListaUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgListaUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgListaUsuarios.Location = new System.Drawing.Point(31, 64);
+            this.dtgListaUsuarios.MultiSelect = false;
+            this.dtgListaUsuarios.Name = "dtgListaUsuarios";
+            this.dtgListaUsuarios.ReadOnly = true;
+            this.dtgListaUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgListaUsuarios.Size = new System.Drawing.Size(747, 266);
+            this.dtgListaUsuarios.TabIndex = 0;
             //
             // gpbRegistrarUsuario
             //
@@ -130,12 +194,23 @@
             this.gpbRegistrarUsuario.Controls.Add(this.label3);
             this.gpbRegistrarUsuario.Controls.Add(this.label2);
             this.gpbRegistrarUsuario.Controls.Add(this.label1);
-            this.gpbRegistrarUsuario.Location = new System.Drawing.Point(12, 12);
+            this.gpbRegistrarUsuario.Location = new System.Drawing.Point(12, 17);
             this.gpbRegistrarUsuario.Name = "gpbRegistrarUsuario";
-            this.gpbRegistrarUsuario.Size = new System.Drawing.Size(943, 407);
-            this.gpbRegistrarUsuario.TabIndex = 1;
+            this.gpbRegistrarUsuario.Size = new System.Drawing.Size(943, 343);
+            this.gpbRegistrarUsuario.TabIndex = 5;
             this.gpbRegistrarUsuario.TabStop = false;
             this.gpbRegistrarUsuario.Text = "Registrar Usuario";
+            //
+            // btnGuardar
+            //
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.Location = new System.Drawing.Point(395, 296);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
             //
             // picBoxFotoUser
             //
@@ -154,7 +229,6 @@
             this.btnBuscarFoto.TabIndex = 39;
             this.btnBuscarFoto.Text = "BUSCAR";
             this.btnBuscarFoto.UseVisualStyleBackColor = true;
-            this.btnBuscarFoto.Click += new System.EventHandler(this.btnBuscarFoto_Click);
             //
             // dtpFechaNacimiento
             //
@@ -207,8 +281,6 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(148, 20);
             this.txtLogin.TabIndex = 34;
-            this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
-            this.txtLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLogin_KeyPress);
             //
             // txtNumeroCelular
             //
@@ -217,7 +289,6 @@
             this.txtNumeroCelular.Name = "txtNumeroCelular";
             this.txtNumeroCelular.Size = new System.Drawing.Size(148, 20);
             this.txtNumeroCelular.TabIndex = 33;
-            this.txtNumeroCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroCelular_KeyPress);
             //
             // txtApellidoMaterno
             //
@@ -226,7 +297,6 @@
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(135, 20);
             this.txtApellidoMaterno.TabIndex = 32;
-            this.txtApellidoMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoMaterno_KeyPress);
             //
             // txtApellidoPaterno
             //
@@ -235,8 +305,6 @@
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(135, 20);
             this.txtApellidoPaterno.TabIndex = 31;
-            this.txtApellidoPaterno.TextChanged += new System.EventHandler(this.txtApellidoPaterno_TextChanged);
-            this.txtApellidoPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoPaterno_KeyPress);
             //
             // txtSegundoNombre
             //
@@ -245,7 +313,6 @@
             this.txtSegundoNombre.Name = "txtSegundoNombre";
             this.txtSegundoNombre.Size = new System.Drawing.Size(135, 20);
             this.txtSegundoNombre.TabIndex = 30;
-            this.txtSegundoNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSegundoNombre_KeyPress);
             //
             // txtPrimerNombre
             //
@@ -254,8 +321,6 @@
             this.txtPrimerNombre.Name = "txtPrimerNombre";
             this.txtPrimerNombre.Size = new System.Drawing.Size(135, 20);
             this.txtPrimerNombre.TabIndex = 29;
-            this.txtPrimerNombre.TextChanged += new System.EventHandler(this.txtPrimerNombre_TextChanged);
-            this.txtPrimerNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrimerNombre_KeyPress);
             //
             // txtCi
             //
@@ -264,7 +329,6 @@
             this.txtCi.Name = "txtCi";
             this.txtCi.Size = new System.Drawing.Size(135, 20);
             this.txtCi.TabIndex = 28;
-            this.txtCi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCi_KeyPress);
             //
             // label24
             //
@@ -412,7 +476,6 @@
             this.btnCancelar.TabIndex = 14;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             //
             // btnRegistrar
             //
@@ -423,7 +486,6 @@
             this.btnRegistrar.TabIndex = 13;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             //
             // lblFotografia
             //
@@ -554,77 +616,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipo de Usuario";
             //
-            // gpbListaUsuarios
-            //
-            this.gpbListaUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gpbListaUsuarios.Controls.Add(this.btnModificar);
-            this.gpbListaUsuarios.Controls.Add(this.btnBuscar);
-            this.gpbListaUsuarios.Controls.Add(this.textBox1);
-            this.gpbListaUsuarios.Controls.Add(this.dtgListaUsuarios);
-            this.gpbListaUsuarios.Location = new System.Drawing.Point(12, 361);
-            this.gpbListaUsuarios.Name = "gpbListaUsuarios";
-            this.gpbListaUsuarios.Size = new System.Drawing.Size(943, 360);
-            this.gpbListaUsuarios.TabIndex = 2;
-            this.gpbListaUsuarios.TabStop = false;
-            this.gpbListaUsuarios.Text = "Lista de Usuarios";
-            //
-            // btnBuscar
-            //
-            this.btnBuscar.Location = new System.Drawing.Point(781, 30);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(129, 23);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            //
-            // textBox1
-            //
-            this.textBox1.Location = new System.Drawing.Point(31, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(733, 20);
-            this.textBox1.TabIndex = 1;
-            //
-            // dtgListaUsuarios
-            //
-            this.dtgListaUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgListaUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgListaUsuarios.Location = new System.Drawing.Point(31, 64);
-            this.dtgListaUsuarios.MultiSelect = false;
-            this.dtgListaUsuarios.Name = "dtgListaUsuarios";
-            this.dtgListaUsuarios.ReadOnly = true;
-            this.dtgListaUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgListaUsuarios.Size = new System.Drawing.Size(747, 273);
-            this.dtgListaUsuarios.TabIndex = 0;
-            //
-            // openFileDialog1
-            //
-            this.openFileDialog1.FileName = "openFileDialog1";
-            //
-            // btnModificar
-            //
-            this.btnModificar.Location = new System.Drawing.Point(805, 110);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 3;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            //
-            // btnGuardar
-            //
-            this.btnGuardar.Location = new System.Drawing.Point(514, 293);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 4;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            //
             // IUUsuario
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -633,21 +624,28 @@
             this.Controls.Add(this.gpbListaUsuarios);
             this.Controls.Add(this.gpbRegistrarUsuario);
             this.Name = "IUUsuario";
-            this.Text = "Usuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Usuario - Registrar";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.gpbRegistrarUsuario.ResumeLayout(false);
-            this.gpbRegistrarUsuario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxFotoUser)).EndInit();
             this.gpbListaUsuarios.ResumeLayout(false);
             this.gpbListaUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaUsuarios)).EndInit();
+            this.gpbRegistrarUsuario.ResumeLayout(false);
+            this.gpbRegistrarUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFotoUser)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.GroupBox gpbListaUsuarios;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dtgListaUsuarios;
         private System.Windows.Forms.GroupBox gpbRegistrarUsuario;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.PictureBox picBoxFotoUser;
         private System.Windows.Forms.Button btnBuscarFoto;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
@@ -689,13 +687,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox gpbListaUsuarios;
-        private System.Windows.Forms.DataGridView dtgListaUsuarios;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnGuardar;
     }
 }
 

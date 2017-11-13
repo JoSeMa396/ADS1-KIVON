@@ -185,16 +185,16 @@ namespace WFASistemaHeladeriaKivon
             while (lecturaConsulta.Read())
             {
                 pedido.IdRol = lecturaConsulta.GetInt32(1);
-                pedido.Ci = lecturaConsulta.GetString(3);
-                pedido.LugarExpedicion = lecturaConsulta.GetString(4);
-                pedido.PrimerNombre = lecturaConsulta.GetString(5);
-                pedido.SegundoNombre = lecturaConsulta.GetString(6);
-                pedido.ApellidoPaterno = lecturaConsulta.GetString(7);
-                pedido.ApellidoMaterno = lecturaConsulta.GetString(8);
+                pedido.PrimerNombre = lecturaConsulta.GetString(3);
+                pedido.SegundoNombre = lecturaConsulta.GetString(4);
+                pedido.ApellidoPaterno = lecturaConsulta.GetString(5);
+                pedido.ApellidoMaterno = lecturaConsulta.GetString(6);
+                pedido.Ci = lecturaConsulta.GetString(7);
+                pedido.LugarExpedicion = lecturaConsulta.GetString(8);
                 pedido.FechaNacimiento = lecturaConsulta.GetString(9);
-                pedido.NumeroCelular = lecturaConsulta.GetInt32(10);
-                pedido.Login = lecturaConsulta.GetString(11);
-                pedido.Password = lecturaConsulta.GetString(12);
+                pedido.NumeroCelular = lecturaConsulta.GetInt32(11);
+                pedido.Login = lecturaConsulta.GetString(12);
+                pedido.Password = lecturaConsulta.GetString(13);
 
             }
             return pedido;

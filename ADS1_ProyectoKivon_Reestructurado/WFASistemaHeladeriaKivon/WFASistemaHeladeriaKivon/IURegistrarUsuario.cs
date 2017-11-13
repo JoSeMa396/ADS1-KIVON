@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace WFASistemaHeladeriaKivon
 {
-    public partial class IUUsuario : Form
+    public partial class IURegistrarUsuario : Form
     {
         //==============================================================================================================
         //METODOS PRINCIPALES
 
-        public IUUsuario()
+        public IURegistrarUsuario()
         {
             InitializeComponent();
         }
@@ -325,7 +325,9 @@ namespace WFASistemaHeladeriaKivon
             }
             return vacios;
         }
+
         int IDUSUARIO = 0;
+
         private void btnModificar_Click(object sender, EventArgs e)
         {
             int idUsuario = Convert.ToInt32(dtgListaUsuarios.SelectedRows[0].Cells[0].Value);
@@ -418,13 +420,11 @@ namespace WFASistemaHeladeriaKivon
             string lugarExpedicion = Convert.ToString(cmbLugarExpedicion.Text);
             //MessageBox.Show("Exp" + lugarExpedicion);
             string fechaNacimiento = dtpFechaNacimiento.Value.ToString("yyyy-MM-dd");
-            string primerNombre = txtPrimerNombre.Text;
-            string segundoNombre = txtSegundoNombre.Text;
-            string apellidoPaterno = txtApellidoPaterno.Text;
-            string apellidoMaterno = txtApellidoMaterno.Text;
-
-            int numeroCelular = Int32.Parse(txtNumeroCelular.Text);
-
+            string primerNombre = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtPrimerNombre.Text);
+            string segundoNombre = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtSegundoNombre.Text);
+            string apellidoPaterno = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtApellidoPaterno.Text);
+            string apellidoMaterno = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtApellidoMaterno.Text);
+            int numeroCelular = int.Parse(txtNumeroCelular.Text);
             string login = txtLogin.Text;
             string password = txtPassword.Text;
             int verificarModificacion = 0;
@@ -445,6 +445,7 @@ namespace WFASistemaHeladeriaKivon
             //string rutaFoto = picBoxFotoUser.ImageLocation;
             //fin pasar parametros
             verificarModificacion = objetoManejadorUsuario.modificarUsuario(objModUsuario, IdUsuario);
+
             if (verificarModificacion != 0)
             {
                 MessageBox.Show("El usuario se actualizo exitosamente");
@@ -452,7 +453,7 @@ namespace WFASistemaHeladeriaKivon
             }
             else
             {
-                MessageBox.Show("Error al actualizo el usuario");
+                MessageBox.Show("Error al actualizar el usuario");
             }
             ResetearCampos();
 
