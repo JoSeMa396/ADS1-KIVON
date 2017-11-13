@@ -32,3 +32,18 @@ C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\
 C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.IUUsuario.resources
 C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.Properties.Resources.resources
 C:\Users\pc\Desktop\analisis y diseno de sistemas 1\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.csproj.GenerateResource.Cache
+C:\Users\TOSHIBA\Desktop\Materias cuarto semestre\analisis y diseño de sistemas\proyecto final\ADS1_ProyectoKivon\Herencia\Herencia\bin\Debug\Herencia.exe.config
+C:\Users\TOSHIBA\Desktop\Materias cuarto semestre\analisis y diseño de sistemas\proyecto final\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.exe
+C:\Users\TOSHIBA\Desktop\Materias cuarto semestre\analisis y diseño de sistemas\proyecto final\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.pdb
+C:\Users\TOSHIBA\Desktop\Materias cuarto semestre\analisis y diseño de sistemas\proyecto final\ADS1_ProyectoKivon\Herencia\Herencia\bin\Debug\Herencia.exe
+C:\Users\TOSHIBA\Desktop\Materias cuarto semestre\analisis y diseño de sistemas\proyecto final\ADS1_ProyectoKivon\Herencia\Herencia\bin\Debug\Herencia.pdb
+C:\Users\TOSHIBA\Desktop\Materias cuarto semestre\analisis y diseño de sistemas\proyecto final\ADS1_ProyectoKivon\Herencia\Herencia\bin\Debug\MySql.Data.dll
+C:\Users\TOSHIBA\Desktop\Materias cuarto semestre\analisis y diseño de sistemas\proyecto final\ADS1_ProyectoKivon\Herencia\Herencia\bin\Debug\MySql.Data.xml
+C:\Users\TOSHIBA\Desktop\Materias cuarto semestre\analisis y diseño de sistemas\proyecto final\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.csprojResolveAssemblyReference.cache
+C:\Users\TOSHIBA\Desktop\Materias cuarto semestre\analisis y diseño de sistemas\proyecto final\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.Form1.resources
+C:\Users\TOSHIBA\Desktop\Materias cuarto semestre\analisis y diseño de sistemas\proyecto final\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.IUUsuario.resources
+C:\Users\TOSHIBA\Desktop\Materias cuarto semestre\analisis y diseño de sistemas\proyecto final\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.Properties.Resources.resources
+C:\Users\TOSHIBA\Desktop\Materias cuarto semestre\analisis y diseño de sistemas\proyecto final\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.csproj.GenerateResource.Cache
+C:\Users\TOSHIBA\Desktop\proyecto final_ADS1\ADS1_ProyectoKivon\Herencia\Herencia\bin\Debug\Herencia.exe.config
+C:\Users\TOSHIBA\Desktop\proyecto final_ADS1\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.exe
+C:\Users\TOSHIBA\Desktop\proyecto final_ADS1\ADS1_ProyectoKivon\Herencia\Herencia\obj\Debug\Herencia.pdb

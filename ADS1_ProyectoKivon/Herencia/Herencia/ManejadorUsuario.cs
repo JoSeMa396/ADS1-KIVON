@@ -65,11 +65,11 @@ namespace Herencia
             {
                 Usuario objUsuario = new Usuario();
                 objUsuario.IdPersona = drLecturaDeConsulta.GetInt32(0);
-                objUsuario.NombreCompleto = drLecturaDeConsulta.GetString(7) + " " + drLecturaDeConsulta.GetString(8) + " " + drLecturaDeConsulta.GetString(5) + " " + drLecturaDeConsulta.GetString(6);
-                objUsuario.CiCompleto = drLecturaDeConsulta.GetString(3) + " " + drLecturaDeConsulta.GetString(4);
+                objUsuario.NombreCompleto = drLecturaDeConsulta.GetString(5) + " " + drLecturaDeConsulta.GetString(6) + " " + drLecturaDeConsulta.GetString(3) + " " + drLecturaDeConsulta.GetString(4);
+                objUsuario.CiCompleto = drLecturaDeConsulta.GetString(7) + " " + drLecturaDeConsulta.GetString(8);
                 objUsuario.fechaNacimiento = drLecturaDeConsulta.GetString(9);
-                objUsuario.numeroCelular = drLecturaDeConsulta.GetInt32(10);
-                objUsuario.ArgActivo = (drLecturaDeConsulta.GetBoolean(13)) == true ? "Activo" : "Inactivo";
+                objUsuario.numeroCelular = drLecturaDeConsulta.GetInt32(11);
+                objUsuario.ArgActivo = (drLecturaDeConsulta.GetBoolean(14)) == true ? "Activo" : "Inactivo";
                 listaUsuarios.Add(objUsuario);
             }
             return listaUsuarios;

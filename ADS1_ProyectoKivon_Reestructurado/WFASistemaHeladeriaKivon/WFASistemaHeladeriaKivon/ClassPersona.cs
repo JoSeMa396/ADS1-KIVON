@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Herencia
+namespace WFASistemaHeladeriaKivon
 {
-    class Persona
+    class ClassPersona
     {
         private int idPersona;
         private string ci;
@@ -16,16 +16,15 @@ namespace Herencia
         private string apellidoPaterno;
         private string apellidoMaterno;
 
-        public Persona() { }
+        public ClassPersona() { }
 
-        public Persona(string ci, string lugarExpedicion, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno)
+        public ClassPersona(string ci, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno)
         {
-            this.ci = ci;
-            this.lugarExpedicion = lugarExpedicion;
-            this.primerNombre = primerNombre;
-            this.segundoNombre = segundoNombre;
-            this.apellidoMaterno = apellidoPaterno;
-            this.apellidoMaterno = apellidoMaterno;
+            this.ci = Ci;
+            this.primerNombre = PrimerNombre;
+            this.segundoNombre = SegundoNombre;
+            this.apellidoPaterno = ApellidoPaterno;
+            this.apellidoMaterno = ApellidoMaterno;
         }
 
         public int IdPersona
@@ -69,7 +68,6 @@ namespace Herencia
             get { return apellidoMaterno; }
             set { apellidoMaterno = value; }
         }
-
 
     }
 }
