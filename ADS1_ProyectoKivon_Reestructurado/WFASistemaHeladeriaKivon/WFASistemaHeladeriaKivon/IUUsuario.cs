@@ -25,7 +25,7 @@ namespace WFASistemaHeladeriaKivon
         {
             llenarDataGridListaUsuarios();
             llenarComboBoxRol();
-            picBoxFotoUser.ImageLocation = @"C:\Users\TOSHIBA\Desktop\proyecto final_ADS1\ADS1_ProyectoKivon_Reestructurado\madia\imagenes\download.png";
+            picBoxFotoUser.ImageLocation = @"C:\Users\TOSHIBA\Desktop\proyecto final_ADS1\ADS1_ProyectoKivon_Reestructurado\media\imagenes\download.png";
         }
         // carga el form
 
@@ -276,7 +276,7 @@ namespace WFASistemaHeladeriaKivon
             cmbTipoUsuario.Text = "";
             txtCi.Text = "";
             txtLogin.Text = "";
-            picBoxFotoUser.ImageLocation = @"C:\Users\TOSHIBA\Desktop\proyecto final_ADS1\ADS1_ProyectoKivon_Reestructurado\madia\imagenes\download.png";
+            picBoxFotoUser.ImageLocation = @"C:\Users\TOSHIBA\Desktop\proyecto final_ADS1\ADS1_ProyectoKivon_Reestructurado\media\imagenes\download.png";
             txtPrimerNombre.Text = "";
             txtSegundoNombre.Text = "";
             txtApellidoPaterno.Text = "";
