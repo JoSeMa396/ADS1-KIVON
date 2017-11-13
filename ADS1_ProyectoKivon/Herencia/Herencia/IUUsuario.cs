@@ -110,8 +110,6 @@ namespace Herencia
             List<string> camposRepetidos = new List<string>();
             Usuario objetoUsuario = new Usuario();
             ManejadorUsuario objetoManejadorUsuario = new ManejadorUsuario();
-            // validacion de los campos
-            //if()
 
 
             if (txtCi.Text == string.Empty)
@@ -120,19 +118,6 @@ namespace Herencia
                 txtCi.Focus();
                 return;
             }
-            /*int ciVerif = 0;
-            if(!int.TryParse(txtCi.Text, out ciVerif))
-            {
-                MessageBox.Show("Debe ingresar un CI numerico");
-                txtCi.Focus();
-                return;
-            }
-            if(ciVerif <= 0 )
-            {
-                MessageBox.Show("Debe ingresar un CI numerico mayor a cero");
-                txtCi.Focus();
-                return;
-            }*/
 
             if(cmbLugarExpedicion.Text == string.Empty)
             {
