@@ -20,7 +20,7 @@ namespace WFASistemaHeladeriaKivon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new IURegistrarUsuario());
+            Application.Run(new IUModificarUsuario());
 
             //===============================================================================================================================================
 

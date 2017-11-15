@@ -67,6 +67,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClassUsuario.cs" />
+    <EmbeddedResource Include="IUModificarUsuario.resx">
+      <DependentUpon>IUModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IURegistrarUsuario.resx">
       <DependentUpon>IURegistrarUsuario.cs</DependentUpon>
     </EmbeddedResource>

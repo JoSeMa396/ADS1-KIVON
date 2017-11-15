@@ -44,7 +44,7 @@ CREATE TABLE producto(
     idCategoria int UNSIGNED not null,
     nombre varchar(30) not null,
     precio float not null,
-    imagen varchar(200) not null,
+    imagen varchar(500) not null,
     descripcion varchar(100) not null,
     cantidad int not null,
     estado ENUM("S","N") not null,
@@ -65,7 +65,7 @@ CREATE TABLE usuario(
     ci VARCHAR(12) UNIQUE NOT NULL,
     lugarExpedicion VARCHAR(15) NOT NULL,
     fechaNacimiento DATE NOT NULL,
-    fotografia VARCHAR(30),
+    fotografia VARCHAR(500),
     numeroCelular INT NOT NULL,
     login VARCHAR(20) UNIQUE NOT NULL,
     password VARCHAR(20) NOT NULL,
@@ -87,7 +87,7 @@ CREATE TABLE referenciaUsuario(
     ci VARCHAR(12) UNIQUE NOT NULL,
     lugarExpedicion VARCHAR(15) NOT NULL,
     fechaNacimiento DATE NOT NULL,
-    fotografiaCarnet VARCHAR(30),
+    fotografiaCarnet VARCHAR(500),
     FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario) ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=InnoDB;
 

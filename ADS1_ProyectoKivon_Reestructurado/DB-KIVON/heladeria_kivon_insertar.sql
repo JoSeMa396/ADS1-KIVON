@@ -50,35 +50,35 @@ value('GASEOSA-2', 1, 6, 'Sprite', 15.00, '/imagenes_gaseosas/2', 'botella de 2 
 
 -- insertar usuarios
 insert into usuario (idUsuario, idRol, idSucursal, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, CI,lugarExpedicion, fechaNacimiento, fotografia, numeroCelular, login, password, activo)
-value(null, 1, 1, 'Ismael', 'Jhaziel', 'Sarzuri', 'Rojas', '8333482', 'LP', '1998-08-30', '/fotos_usuarios/1', '77561348', 'isarzuri', 'isarzuri', TRUE);
+value(null, 1, 1, 'Ismael', 'Jhaziel', 'Sarzuri', 'Rojas', '8333482', 'LP', '1998-08-30', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png', '77561348', 'isarzuri', 'isarzuri', TRUE);
 insert into usuario (idUsuario, idRol, idSucursal, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, CI,lugarExpedicion, fechaNacimiento, fotografia, numeroCelular, login, password, activo)
-value(null, 2, 1, 'Carlos', 'Alberto', 'Ojeda', 'Vargas', '8333483', 'SC', '1997-01-15', '/fotos_usuarios/2', '77316431', 'cojeda', 'cojeda', TRUE);
+value(null, 2, 1, 'Carlos', 'Alberto', 'Ojeda', 'Vargas', '8333483', 'SC', '1997-01-15', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png', '77316431', 'cojeda', 'cojeda', TRUE);
 insert into usuario (idUsuario, idRol, idSucursal, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, CI,lugarExpedicion, fechaNacimiento, fotografia, numeroCelular, login, password, activo)
-value(null, 3, 1, 'Jose Maria', '', 'Mendoza', 'Mamani', '8333484', 'LP', '1997-02-20', '/fotos_usuarios/3', '71767349', 'jmendoza', 'jmendoza', FALSE);
+value(null, 3, 1, 'Jose Maria', '', 'Mendoza', 'Mamani', '8333484', 'LP', '1997-02-20', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png', '71767349', 'jmendoza', 'jmendoza', FALSE);
 insert into usuario (idUsuario, idRol, idSucursal, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, CI,lugarExpedicion, fechaNacimiento, fotografia, numeroCelular, login, password, activo)
-value(null, 3, 1, 'Luis', '', 'Montaño', '', '8333485', 'LP', '1995-02-16', '/fotos_usuarios/4', '77966358', 'lmontaño', 'lmontaño', FALSE);
+value(null, 3, 1, 'Luis', '', 'Montaño', '', '8333485', 'LP', '1995-02-16', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png', '77966358', 'lmontaño', 'lmontaño', FALSE);
 insert into usuario (idUsuario, idRol, idSucursal, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, CI,lugarExpedicion, fechaNacimiento, fotografia, numeroCelular, login, password, activo)
-value(null, 3, 1, 'Daniel', '', 'Resoalbe', '', '8333486', 'CB', '1998-06-30', '/fotos_usuarios/5', '71757468', 'dresoalbe', 'dresoalbe', FALSE);
+value(null, 3, 1, 'Daniel', '', 'Resoalbe', '', '8333486', 'CB', '1998-06-30', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png', '71757468', 'dresoalbe', 'dresoalbe', FALSE);
 insert into usuario (idUsuario, idRol, idSucursal, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, CI,lugarExpedicion, fechaNacimiento, fotografia, numeroCelular, login, password, activo)
-value(null, 4, 1, 'Yessica', 'Ester', 'Navarro', 'Suarez', '8333423', 'TJ', '1998-07-01', '/fotos_usuarios/6', '71753290', 'ynavarro', 'ynavarro', FALSE);
+value(null, 4, 1, 'Yessica', 'Ester', 'Navarro', 'Suarez', '8333423', 'TJ', '1998-07-01', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png', '71753290', 'ynavarro', 'ynavarro', FALSE);
 insert into usuario (idUsuario, idRol, idSucursal, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, CI,lugarExpedicion, fechaNacimiento, fotografia, numeroCelular, login, password, activo)
-value(null, 4, 1, 'Dayana', 'Laura', 'Rico', 'Tellez', '83334811', 'CB', '1996-10-27', '/fotos_usuarios/7', '71700359', 'drico', 'drico', FALSE);
+value(null, 4, 1, 'Dayana', 'Laura', 'Rico', 'Tellez', '83334811', 'CB', '1996-10-27', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png', '71700359', 'drico', 'drico', FALSE);
 
 -- insertar referencia de usuarios (garantes)
 insert into referenciaUsuario (idReferenciaUsuario, idUsuario, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, numeroCelular, ci, lugarExpedicion, fechaNacimiento, fotografiaCarnet)
-value(null, 1, 'Diana', 'Laura', 'Rico', 'Tellez', '71736543', '39485765', 'CB', '1996-07-30', '/fotos_garante/1');
+value(null, 1, 'Diana', 'Laura', 'Rico', 'Tellez', '71736543', '39485765', 'CB', '1996-07-30', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png');
 insert into referenciaUsuario (idReferenciaUsuario, idUsuario, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, numeroCelular, ci, lugarExpedicion, fechaNacimiento, fotografiaCarnet)
-value(null, 2, 'Yolanda', 'Ester', 'Navarro', 'Suarez', '71736295', '39485766', 'TJ', '1996-08-30', '/fotos_garante/2');
+value(null, 2, 'Yolanda', 'Ester', 'Navarro', 'Suarez', '71736295', '39485766', 'TJ', '1996-08-30', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png');
 insert into referenciaUsuario (idReferenciaUsuario, idUsuario, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, numeroCelular, ci, lugarExpedicion, fechaNacimiento, fotografiaCarnet)
-value(null, 3, 'Dario', '', 'Resoalbe', '', '71736001', '39485767', 'CB', '1996-09-30', '/fotos_garante/3');
+value(null, 3, 'Dario', '', 'Resoalbe', '', '71736001', '39485767', 'CB', '1996-09-30', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png');
 insert into referenciaUsuario (idReferenciaUsuario, idUsuario, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, numeroCelular, ci, lugarExpedicion, fechaNacimiento, fotografiaCarnet)
-value(null, 4, 'Lorgio', '', 'Montaño', '', '71736324', '39485768', 'LP', '1996-10-30', '/fotos_garante/4');
+value(null, 4, 'Lorgio', '', 'Montaño', '', '71736324', '39485768', 'LP', '1996-10-30', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png');
 insert into referenciaUsuario (idReferenciaUsuario, idUsuario, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, numeroCelular, ci, lugarExpedicion, fechaNacimiento, fotografiaCarnet)
-value(null, 5, 'Maria Jose', '', 'Mendoza', 'Mamani', '71736993', '39485769', 'LP', '1996-11-30', '/fotos_garante/5');
+value(null, 5, 'Maria Jose', '', 'Mendoza', 'Mamani', '71736993', '39485769', 'LP', '1996-11-30', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png');
 insert into referenciaUsuario (idReferenciaUsuario, idUsuario, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, numeroCelular, ci, lugarExpedicion, fechaNacimiento, fotografiaCarnet)
-value(null, 6, 'Cesar', 'Alberto', 'Ojeda', 'Vargas', '71736994', '39485770', 'SC', '1996-12-30', '/fotos_garante/6');
+value(null, 6, 'Cesar', 'Alberto', 'Ojeda', 'Vargas', '71736994', '39485770', 'SC', '1996-12-30', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png');
 insert into referenciaUsuario (idReferenciaUsuario, idUsuario, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, numeroCelular, ci, lugarExpedicion, fechaNacimiento, fotografiaCarnet)
-value(null, 7, 'Ignacio', 'Jhaziel', 'Sarzuri', 'Rojas', '71736377', '39485771', 'LP', '1996-01-30', '/fotos_garante/7');
+value(null, 7, 'Ignacio', 'Jhaziel', 'Sarzuri', 'Rojas', '71736377', '39485771', 'LP', '1996-01-30', 'C:\\Users\\TOSHIBA\\Desktop\\proyecto final_ADS1\\ADS1_ProyectoKivon_Reestructurado\\media\\imagenes\\download.png');
 
 -- insertar clientes
 insert into cliente(idCliente, idSucursal, ci, lugarExpedicion, nit, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno)
@@ -129,5 +129,3 @@ insert into factura (idFactura, idVenta, idSucursal, numeroFactura, codigoContro
 value(null, 1, 1, 2, 48364836, '2017-12-31');
 insert into factura (idFactura, idVenta, idSucursal, numeroFactura, codigoControl, fechaLimiteEmision)
 value(null, 3, 1, 3, 48364836, '2017-12-31');
-
-

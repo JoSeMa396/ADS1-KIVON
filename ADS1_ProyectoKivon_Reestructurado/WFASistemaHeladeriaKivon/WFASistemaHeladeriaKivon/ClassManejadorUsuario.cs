@@ -76,15 +76,16 @@ namespace WFASistemaHeladeriaKivon
             return listaUsuarios;
         }
 
-        public string validarCi(string ci)
+        public string validarCi(string ci, int idusuario = 0)//en el caso de que se quiera ingresar un nuevo usuario el id por default sera 0, en el caso de querer modificar los datos de un usuario se asignará el id de tal usuario
         {
             string campoRepetido = null;
             List<ClassUsuario> listaUsuarios = new List<ClassUsuario>();
 
             MySqlConnection conexion = ClassConexion.abrirConexion();
-            string sqlValidarCampos = "select idusuario as id from usuario where ci =?ci union select idcliente as id from cliente where ci=?ci union select idreferenciausuario  as id from referenciausuario where ci=?ci;";
+            string sqlValidarCampos = "select idusuario from usuario where ci =?ci and idusuario != ?id union select idcliente from cliente where ci=?ci union select idreferenciausuario from referenciausuario where ci=?ci;";
             MySqlCommand cmdValidar = new MySqlCommand(sqlValidarCampos, conexion);
             cmdValidar.Parameters.AddWithValue("?ci", ci);
+            cmdValidar.Parameters.AddWithValue("?id", idusuario);
 
             MySqlDataReader lecturaConsulta = cmdValidar.ExecuteReader();
 
@@ -101,17 +102,17 @@ namespace WFASistemaHeladeriaKivon
             }
 
             return campoRepetido;
-        }
-        // verifica que el CI dado no esté repetido en la base de datos
+        }// verifica que el CI dado no esté repetido en la base de datos
 
-        public string validarCelular(string celular)
+        public string validarCelular(string celular, int idusuario = 0)
         {
             string campoRepetido = null;
             List<ClassUsuario> listaUsuarios = new List<ClassUsuario>();
             MySqlConnection conexion = ClassConexion.abrirConexion();
-            string sqlValidarCampos = "SELECT idUsuario FROM usuario WHERE numeroCelular = ?celular";
+            string sqlValidarCampos = "SELECT idUsuario FROM usuario WHERE numeroCelular = ?celular and idusuario != ?id";
             MySqlCommand cmdValidar = new MySqlCommand(sqlValidarCampos, conexion);
             cmdValidar.Parameters.AddWithValue("?celular", celular);
+            cmdValidar.Parameters.AddWithValue("?id", idusuario);
             MySqlDataReader lecturaConsulta = cmdValidar.ExecuteReader();
 
             while (lecturaConsulta.Read())
@@ -128,17 +129,17 @@ namespace WFASistemaHeladeriaKivon
             }
 
             return campoRepetido;
-        }
-        // verifica que el numero de celular dado no esté repetido en la base de datos
+        }// verifica que el numero de celular dado no esté repetido en la base de datos
 
-        public string validarUsuario(string usuario)
+        public string validarUsuario(string usuario, int idusuario = 0)
         {
             string campoRepetido = null;
             List<ClassUsuario> listaUsuarios = new List<ClassUsuario>();
             MySqlConnection conexion = ClassConexion.abrirConexion();
-            string sqlValidarCampos = "SELECT idUsuario FROM usuario WHERE login = ?usuario";
+            string sqlValidarCampos = "SELECT idUsuario FROM usuario WHERE login = ?usuario and idusuario != ?id";
             MySqlCommand cmdValidar = new MySqlCommand(sqlValidarCampos, conexion);
             cmdValidar.Parameters.AddWithValue("?usuario", usuario);
+            cmdValidar.Parameters.AddWithValue("?id", idusuario);
             MySqlDataReader lecturaConsulta = cmdValidar.ExecuteReader();
 
             while (lecturaConsulta.Read())
@@ -155,57 +156,61 @@ namespace WFASistemaHeladeriaKivon
             }
 
             return campoRepetido;
-        }
-        // verifica que el nombre de usuario dado no esté repetido en la base de datos
+        }// verifica que el nombre de usuario dado no esté repetido en la base de datos
 
-        public List<string> verificarDatosRepetidos(string ci, string celular, string usuario)
+        public List<string> verificarDatosRepetidos(string ci, string celular, string usuario, int idusuario = 0)
         {
             List<string> repetidos = new List<string>();
 
-            if (validarCi(ci) != null)
+            if (validarCi(ci, idusuario) != null)
                 repetidos.Add(validarCi(ci));
-            if (validarCelular(celular) != null)
+            if (validarCelular(celular, idusuario) != null)
                 repetidos.Add(validarCelular(celular));
-            if (validarUsuario(usuario) != null)
+            if (validarUsuario(usuario, idusuario) != null)
                 repetidos.Add(validarUsuario(usuario));
 
             return repetidos;
-        }
-        // verifica que todos los datos obligatorios a llenar en el formulario no estén repetidos en la base de datos
+        }// verifica que todos los datos obligatorios a llenar en el formulario no estén repetidos en la base de datos
         //metodo pide un usuario
         public ClassUsuario pedirUsuario(int idUsuario)
         {
-            ClassUsuario pedido = new ClassUsuario();
+            ClassUsuario Upedido = new ClassUsuario();
             MySqlConnection conexion = ClassConexion.abrirConexion();
+
             string sqlPedido = "SELECT * FROM USUARIO WHERE idUsuario = ?idUsuario";
             MySqlCommand pedirUsuario = new MySqlCommand(sqlPedido, conexion);
             pedirUsuario.Parameters.AddWithValue("?idUsuario", idUsuario);
+
             MySqlDataReader lecturaConsulta = pedirUsuario.ExecuteReader();
 
             while (lecturaConsulta.Read())
             {
-                pedido.IdRol = lecturaConsulta.GetInt32(1);
-                pedido.PrimerNombre = lecturaConsulta.GetString(3);
-                pedido.SegundoNombre = lecturaConsulta.GetString(4);
-                pedido.ApellidoPaterno = lecturaConsulta.GetString(5);
-                pedido.ApellidoMaterno = lecturaConsulta.GetString(6);
-                pedido.Ci = lecturaConsulta.GetString(7);
-                pedido.LugarExpedicion = lecturaConsulta.GetString(8);
-                pedido.FechaNacimiento = lecturaConsulta.GetString(9);
-                pedido.NumeroCelular = lecturaConsulta.GetInt32(11);
-                pedido.Login = lecturaConsulta.GetString(12);
-                pedido.Password = lecturaConsulta.GetString(13);
+                Upedido.IdPersona = lecturaConsulta.GetInt32(0);
+                Upedido.IdRol = lecturaConsulta.GetInt32(1);
+                Upedido.IdSucursal = lecturaConsulta.GetInt32(2);
+                Upedido.PrimerNombre = lecturaConsulta.GetString(3);
+                Upedido.SegundoNombre = lecturaConsulta.GetString(4);
+                Upedido.ApellidoPaterno = lecturaConsulta.GetString(5);
+                Upedido.ApellidoMaterno = lecturaConsulta.GetString(6);
+                Upedido.Ci = lecturaConsulta.GetString(7);
+                Upedido.LugarExpedicion = lecturaConsulta.GetString(8);
+                Upedido.FechaNacimiento = (lecturaConsulta.GetDateTime(9).Date).ToString();
+                Upedido.ImagenFotografia = lecturaConsulta.GetString(10);
+                Upedido.NumeroCelular = lecturaConsulta.GetInt32(11);
+                Upedido.Login = lecturaConsulta.GetString(12);
+                Upedido.Password = lecturaConsulta.GetString(13);
 
             }
-            return pedido;
+            return Upedido;
         }
         //fin metodo pedir un usuario
+
         //metodo modificar usuario
         public int modificarUsuario(ClassUsuario obUsuario, int idUsuario)
         {
             int exitoModificar = 0;
             MySqlConnection conexion = ClassConexion.abrirConexion();
-            string sqlModificar = "update usuario set idRol = ?idrol, ci = ?ci, primerNombre = ?primernombre, segundoNombre = ?segundonombre, apellidoPaterno = ?apellidopaterno, apellidoMaterno = ?apellidomaterno, fechaNacimiento = ?fechanacimiento, lugarExpedicion = ?lugarexpedicion, numeroCelular = ?numerocelular, login = ?login, password = ?password where idUsuario = ?idusuario;";
+            string sqlModificar = "update usuario set idRol = ?idrol, ci = ?ci, primerNombre = ?primernombre, segundoNombre = ?segundonombre, apellidoPaterno = ?apellidopaterno, apellidoMaterno = ?apellidomaterno, fechaNacimiento = ?fechanacimiento, lugarExpedicion = ?lugarexpedicion, numeroCelular = ?numerocelular, fotografia = ?fotografia, login = ?login, password = ?password where idUsuario = ?idusuario;";
             MySqlCommand modificarUsuario = new MySqlCommand(sqlModificar, conexion);
             modificarUsuario.Parameters.AddWithValue("?idRol", obUsuario.IdRol);
             modificarUsuario.Parameters.AddWithValue("?ci", obUsuario.Ci);
@@ -216,6 +221,7 @@ namespace WFASistemaHeladeriaKivon
             modificarUsuario.Parameters.AddWithValue("?fechanacimiento", obUsuario.FechaNacimiento);
             modificarUsuario.Parameters.AddWithValue("?lugarexpedicion", obUsuario.LugarExpedicion);
             modificarUsuario.Parameters.AddWithValue("?numerocelular", obUsuario.NumeroCelular);
+            modificarUsuario.Parameters.AddWithValue("?fotografia", obUsuario.ImagenFotografia);
             modificarUsuario.Parameters.AddWithValue("?login", obUsuario.Login);
             modificarUsuario.Parameters.AddWithValue("?password", obUsuario.Password);
             modificarUsuario.Parameters.AddWithValue("?idusuario", idUsuario);

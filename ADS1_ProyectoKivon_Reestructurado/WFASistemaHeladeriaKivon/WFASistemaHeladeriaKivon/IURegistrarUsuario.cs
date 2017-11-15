@@ -441,9 +441,6 @@ namespace WFASistemaHeladeriaKivon
             objModUsuario.Login = login;
             objModUsuario.Password = password;
 
-            //activo = rdbSi.Checked == true ? true : false;
-            //string rutaFoto = picBoxFotoUser.ImageLocation;
-            //fin pasar parametros
             verificarModificacion = objetoManejadorUsuario.modificarUsuario(objModUsuario, IdUsuario);
 
             if (verificarModificacion != 0)
