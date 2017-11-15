@@ -1,0 +1,15 @@
+c:\users\carlos alberto ojeda\documents\visual studio 2015\Projects\Heladeria 1\Heladeria 1\bin\Debug\Heladeria 1.exe.config
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\bin\Debug\Heladeria 1.exe
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\bin\Debug\Heladeria 1.pdb
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\bin\Debug\MySql.Data.dll
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\bin\Debug\MySql.Data.xml
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\obj\Debug\Heladeria 1.csprojResolveAssemblyReference.cache
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\obj\Debug\Heladeria_1.Form1.resources
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\obj\Debug\Heladeria_1.Properties.Resources.resources
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\obj\Debug\Heladeria 1.csproj.GenerateResource.Cache
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\obj\Debug\Heladeria 1.exe
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\obj\Debug\Heladeria 1.pdb
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\obj\Debug\Heladeria_1.FormUsuario.resources
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\obj\Debug\Heladeria_1.formCliente.resources
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\obj\Debug\Heladeria_1.FormLogin.resources
+C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\obj\Debug\Heladeria_1.FormOpcionesUsuario.resources
