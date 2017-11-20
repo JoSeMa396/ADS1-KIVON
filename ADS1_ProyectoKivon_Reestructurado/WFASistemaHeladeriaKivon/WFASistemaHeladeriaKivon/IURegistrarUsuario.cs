@@ -456,6 +456,11 @@ namespace WFASistemaHeladeriaKivon
 
             actualizarDataGridView();
         }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+
+        }
         // verifica que los campos obligatorios a llenar no esten vacios
     }
 }
