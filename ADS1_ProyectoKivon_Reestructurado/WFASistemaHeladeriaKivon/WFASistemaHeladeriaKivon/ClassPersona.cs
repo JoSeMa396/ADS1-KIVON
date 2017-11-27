@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WFASistemaHeladeriaKivon
 {
-    class ClassPersona
+    public class ClassPersona
     {
         private int idPersona;
         private string ci;

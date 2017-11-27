@@ -48,7 +48,7 @@ namespace WFASistemaHeladeriaKivon
 
             MySqlConnection conexion = ClassConexion.abrirConexion();
 
-            string sqlListaUsuarios = "SELECT * FROM usuario ORDER BY apellidoPaterno, apellidoMaterno,primerNombre,segundoNombre;";
+            string sqlListaUsuarios = "SELECT u.*, r.nombrerol FROM usuario u join rol r on u.idrol = r.idrol ORDER BY u.idusuario;";
 
             MySqlCommand cmdListaUsuarios = new MySqlCommand(sqlListaUsuarios, conexion);
             MySqlDataReader drLecturaDeConsulta = cmdListaUsuarios.ExecuteReader();
@@ -69,7 +69,10 @@ namespace WFASistemaHeladeriaKivon
                 objUsuario.FechaNacimiento = (drLecturaDeConsulta.GetDateTime(9).Date).ToString();
                 objUsuario.ImagenFotografia = drLecturaDeConsulta.GetString(10);
                 objUsuario.NumeroCelular = drLecturaDeConsulta.GetInt32(11);
+                objUsuario.Login = drLecturaDeConsulta.GetString(12);
+                objUsuario.Password = drLecturaDeConsulta.GetString(13);
                 objUsuario.Activo = drLecturaDeConsulta.GetBoolean(14);
+                objUsuario.NombreRol = drLecturaDeConsulta.GetString(15);
 
                 listaUsuarios.Add(objUsuario);
             }
@@ -171,7 +174,7 @@ namespace WFASistemaHeladeriaKivon
 
             return repetidos;
         }// verifica que todos los datos obligatorios a llenar en el formulario no estén repetidos en la base de datos
-        //metodo pide un usuario
+
         public ClassUsuario pedirUsuario(int idUsuario)
         {
             ClassUsuario Upedido = new ClassUsuario();
@@ -202,15 +205,13 @@ namespace WFASistemaHeladeriaKivon
 
             }
             return Upedido;
-        }
-        //fin metodo pedir un usuario
+        }//busca un usuario de acuerdo a su id de usuario y en caso de encontrarlo devuelve tal usuario con todos sus datos
 
-        //metodo modificar usuario
         public int modificarUsuario(ClassUsuario obUsuario, int idUsuario)
         {
             int exitoModificar = 0;
             MySqlConnection conexion = ClassConexion.abrirConexion();
-            string sqlModificar = "update usuario set idRol = ?idrol, ci = ?ci, primerNombre = ?primernombre, segundoNombre = ?segundonombre, apellidoPaterno = ?apellidopaterno, apellidoMaterno = ?apellidomaterno, fechaNacimiento = ?fechanacimiento, lugarExpedicion = ?lugarexpedicion, numeroCelular = ?numerocelular, fotografia = ?fotografia, login = ?login, password = ?password where idUsuario = ?idusuario;";
+            string sqlModificar = "update usuario set idRol = ?idrol, ci = ?ci, primerNombre = ?primernombre, segundoNombre = ?segundonombre, apellidoPaterno = ?apellidopaterno, apellidoMaterno = ?apellidomaterno, fechaNacimiento = ?fechanacimiento, lugarExpedicion = ?lugarexpedicion, numeroCelular = ?numerocelular, fotografia = ?fotografia, login = ?login, password = ?password, activo = ?activo where idUsuario = ?idusuario;";
             MySqlCommand modificarUsuario = new MySqlCommand(sqlModificar, conexion);
             modificarUsuario.Parameters.AddWithValue("?idRol", obUsuario.IdRol);
             modificarUsuario.Parameters.AddWithValue("?ci", obUsuario.Ci);
@@ -224,6 +225,7 @@ namespace WFASistemaHeladeriaKivon
             modificarUsuario.Parameters.AddWithValue("?fotografia", obUsuario.ImagenFotografia);
             modificarUsuario.Parameters.AddWithValue("?login", obUsuario.Login);
             modificarUsuario.Parameters.AddWithValue("?password", obUsuario.Password);
+            modificarUsuario.Parameters.AddWithValue("?activo", obUsuario.Activo);
             modificarUsuario.Parameters.AddWithValue("?idusuario", idUsuario);
 
             try
@@ -239,7 +241,42 @@ namespace WFASistemaHeladeriaKivon
 
             return exitoModificar;
 
-        }
-        //fin metodo modificar usuario
+        }//modifica los datos de un usuario ya existente
+
+        public ClassUsuario VerificarExistenciaUsuario(string NombreUsuario)
+        {
+            ClassUsuario encontrado = new ClassUsuario();
+            MySqlConnection conexion = ClassConexion.abrirConexion();
+
+            string sqlPedido = "select u.*, r.nombrerol from usuario u join rol r on u.idrol = r.idrol where u.login = ?login";
+            MySqlCommand pedirUsuario = new MySqlCommand(sqlPedido, conexion);
+            pedirUsuario.Parameters.AddWithValue("?login", NombreUsuario);
+
+            MySqlDataReader lecturaConsulta = pedirUsuario.ExecuteReader();
+            if (pedirUsuario != null)
+            {
+                while (lecturaConsulta.Read())
+                {
+                    encontrado.IdPersona = lecturaConsulta.GetInt32(0);
+                    encontrado.IdRol = lecturaConsulta.GetInt32(1);
+                    encontrado.IdSucursal = lecturaConsulta.GetInt32(2);
+                    encontrado.PrimerNombre = lecturaConsulta.GetString(3);
+                    encontrado.SegundoNombre = lecturaConsulta.GetString(4);
+                    encontrado.ApellidoPaterno = lecturaConsulta.GetString(5);
+                    encontrado.ApellidoMaterno = lecturaConsulta.GetString(6);
+                    encontrado.Ci = lecturaConsulta.GetString(7);
+                    encontrado.LugarExpedicion = lecturaConsulta.GetString(8);
+                    encontrado.FechaNacimiento = (lecturaConsulta.GetDateTime(9).Date).ToString();
+                    encontrado.ImagenFotografia = lecturaConsulta.GetString(10);
+                    encontrado.NumeroCelular = lecturaConsulta.GetInt32(11);
+                    encontrado.Login = lecturaConsulta.GetString(12);
+                    encontrado.Password = lecturaConsulta.GetString(13);
+                    encontrado.Activo = lecturaConsulta.GetBoolean(14);
+                    encontrado.NombreRol = lecturaConsulta.GetString(15);
+
+                }
+            }
+            return encontrado;
+        }//busca un usuario de acuerdo a su nombre (login) de usuario y en caso de encontrarlo devuelve tal usuario con todos sus datos
     }
 }

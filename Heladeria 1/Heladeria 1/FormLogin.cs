@@ -17,6 +17,7 @@ namespace Heladeria_1
             InitializeComponent();
         }
         List<Usuario> ListaUsuarios = new List<Usuario>();
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             int n = identificarUsuario(txtId.Text, txtPassword.Text);

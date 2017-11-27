@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace WFASistemaHeladeriaKivon
 {
-    class ClassUsuario : ClassPersona
+    public class ClassUsuario : ClassPersona
     {
         public int IdRol { get; set; }
+        public string NombreRol { get; set; }
         public int IdSucursal { get; set; }
         public string FechaNacimiento { get; set; }
         public int NumeroCelular { get; set; }
@@ -19,9 +20,10 @@ namespace WFASistemaHeladeriaKivon
 
         public ClassUsuario() { }
 
-        public ClassUsuario(int IdRol, int IdSucursal, string FechaNacimiento, int NumeroCelular, string Login, string Password, string ImagenFotografia, bool Activo)
+        public ClassUsuario(int IdRol, string NombreRol, int IdSucursal, string FechaNacimiento, int NumeroCelular, string Login, string Password, string ImagenFotografia, bool Activo)
         {
             this.IdRol = IdRol;
+            this.NombreRol = NombreRol;
             this.IdSucursal = IdSucursal;
             this.FechaNacimiento = FechaNacimiento;
             this.NumeroCelular = NumeroCelular;

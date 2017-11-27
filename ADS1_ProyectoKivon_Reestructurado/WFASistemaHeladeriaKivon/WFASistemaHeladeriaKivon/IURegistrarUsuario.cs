@@ -23,7 +23,6 @@ namespace WFASistemaHeladeriaKivon
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            btnGuardar.Enabled = false;
             llenarDataGridListaUsuarios();
             llenarComboBoxRol();
             picBoxFotoUser.ImageLocation = @"C:\Users\TOSHIBA\Desktop\proyecto final_ADS1\ADS1_ProyectoKivon_Reestructurado\media\imagenes\download.png";
@@ -216,6 +215,13 @@ namespace WFASistemaHeladeriaKivon
 
             dtgListaUsuarios.Columns.Add(new DataGridViewTextBoxColumn()
             {
+                Name = "NombreRol",
+                HeaderText = "Cargo",
+                DataPropertyName = "NombreRol"
+            });
+
+            dtgListaUsuarios.Columns.Add(new DataGridViewTextBoxColumn()
+            {
                 Name = "NombreCompleto",
                 HeaderText = "Nombre Completo",
                 DataPropertyName = "NombreCompleto"
@@ -324,142 +330,6 @@ namespace WFASistemaHeladeriaKivon
                 vacios.Add("Número celular");
             }
             return vacios;
-        }
-
-        int IDUSUARIO = 0;
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            int idUsuario = Convert.ToInt32(dtgListaUsuarios.SelectedRows[0].Cells[0].Value);
-            IDUSUARIO = idUsuario;
-            MessageBox.Show("Desea modificar al usuario con un id Usuario : " + dtgListaUsuarios.SelectedRows[0].Cells[0].Value);
-            ClassManejadorUsuario objpedido = new ClassManejadorUsuario();
-            switch (objpedido.pedirUsuario(idUsuario).IdRol)
-            {
-                case 1:
-                    cmbTipoUsuario.Text = "Administrador";
-                    break;
-                case 2:
-                    cmbTipoUsuario.Text = "Contador";
-                    break;
-                case 3:
-                    cmbTipoUsuario.Text = "Mesero";
-                    break;
-                case 4:
-                    cmbTipoUsuario.Text = "Cajero";
-                    break;
-            }
-            txtCi.Text = objpedido.pedirUsuario(idUsuario).Ci;
-            txtPrimerNombre.Text = objpedido.pedirUsuario(idUsuario).PrimerNombre;
-            txtSegundoNombre.Text = objpedido.pedirUsuario(idUsuario).SegundoNombre;
-            txtApellidoPaterno.Text = objpedido.pedirUsuario(idUsuario).ApellidoPaterno;
-            txtApellidoMaterno.Text = objpedido.pedirUsuario(idUsuario).ApellidoMaterno;
-            cmbLugarExpedicion.Text = objpedido.pedirUsuario(idUsuario).LugarExpedicion;
-            txtNumeroCelular.Text = Convert.ToString(objpedido.pedirUsuario(idUsuario).NumeroCelular);
-            txtLogin.Text = objpedido.pedirUsuario(idUsuario).Login;
-            txtPassword.Text = objpedido.pedirUsuario(idUsuario).Password;
-            btnGuardar.Enabled = true;
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            ClassUsuario objModUsuario = new ClassUsuario();
-            int IdUsuario = IDUSUARIO;
-            ClassManejadorUsuario objetoManejadorUsuario = new ClassManejadorUsuario();
-            //validar campos
-            if (txtCi.Text == string.Empty)
-            {
-                MessageBox.Show("Debe ingresar un CI");
-                txtCi.Focus();
-                return;
-            }
-            if (cmbLugarExpedicion.Text == string.Empty)
-            {
-                MessageBox.Show("Debe elegir un Lugar de Expedicion de su carnet ");
-                cmbLugarExpedicion.Focus();
-                return;
-            }
-
-            if (txtPrimerNombre.Text == string.Empty)
-            {
-                MessageBox.Show("Debe ingresar un Nombre ");
-                txtPrimerNombre.Focus();
-                return;
-            }
-
-            if (txtApellidoPaterno.Text == string.Empty)
-            {
-                MessageBox.Show("Debe ingresar un Apellido ");
-                txtApellidoPaterno.Focus();
-                return;
-            }
-
-            if (txtNumeroCelular.Text == string.Empty)
-            {
-                MessageBox.Show("Debe ingresar un Numero de Celular ");
-                txtNumeroCelular.Focus();
-                return;
-            }
-            int celVerif = 0;
-            if (!int.TryParse(txtNumeroCelular.Text, out celVerif))
-            {
-                MessageBox.Show("Debe ingresar un Numero entero");
-                txtNumeroCelular.Focus();
-                return;
-            }
-            if (celVerif <= 0)
-            {
-                MessageBox.Show("Debe ingresar un Numero mayor a cero");
-                txtNumeroCelular.Focus();
-                return;
-            }//end validar campos
-            //pasar parametros
-            int idRol = Convert.ToInt32(cmbTipoUsuario.SelectedValue);
-            string ci = txtCi.Text;
-            //string lugarExpedicion = "Cochabamba";
-            string lugarExpedicion = Convert.ToString(cmbLugarExpedicion.Text);
-            //MessageBox.Show("Exp" + lugarExpedicion);
-            string fechaNacimiento = dtpFechaNacimiento.Value.ToString("yyyy-MM-dd");
-            string primerNombre = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtPrimerNombre.Text);
-            string segundoNombre = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtSegundoNombre.Text);
-            string apellidoPaterno = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtApellidoPaterno.Text);
-            string apellidoMaterno = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtApellidoMaterno.Text);
-            int numeroCelular = int.Parse(txtNumeroCelular.Text);
-            string login = txtLogin.Text;
-            string password = txtPassword.Text;
-            int verificarModificacion = 0;
-
-            objModUsuario.IdRol = idRol;
-            objModUsuario.Ci = ci;
-            objModUsuario.LugarExpedicion = lugarExpedicion;
-            objModUsuario.FechaNacimiento = fechaNacimiento;
-            objModUsuario.PrimerNombre = primerNombre;
-            objModUsuario.SegundoNombre = segundoNombre;
-            objModUsuario.ApellidoPaterno = apellidoPaterno;
-            objModUsuario.ApellidoMaterno = apellidoMaterno;
-            objModUsuario.NumeroCelular = numeroCelular;
-            objModUsuario.Login = login;
-            objModUsuario.Password = password;
-
-            verificarModificacion = objetoManejadorUsuario.modificarUsuario(objModUsuario, IdUsuario);
-
-            if (verificarModificacion != 0)
-            {
-                MessageBox.Show("El usuario se actualizo exitosamente");
-                ResetearCampos();
-            }
-            else
-            {
-                MessageBox.Show("Error al actualizar el usuario");
-            }
-            ResetearCampos();
-
-            actualizarDataGridView();
-        }
-
-        private void btnModificar_Click_1(object sender, EventArgs e)
-        {
-
         }
         // verifica que los campos obligatorios a llenar no esten vacios
     }

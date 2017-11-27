@@ -13,8 +13,15 @@ namespace WFASistemaHeladeriaKivon
 {
     public partial class IUModificarUsuario : Form
     {
+        //==============================================================================================================
+        // VARIABLES
+
         private ClassManejadorUsuario objManejadorUsuario = new ClassManejadorUsuario();
         private ClassUsuario objetoUsuario;
+
+        //FIN VARIABLES
+        //==============================================================================================================
+        // METODOS PRIMARIOS
 
         public IUModificarUsuario()
         {
@@ -168,6 +175,7 @@ namespace WFASistemaHeladeriaKivon
                     string foto = picBoxFotoUser.ImageLocation;
                     string login = txtLogin.Text;
                     string password = txtPassword.Text;
+                    bool activo = rdbSi.Checked == true ? true : false;
 
                     int verificarModificacion = 0;
 
@@ -183,6 +191,7 @@ namespace WFASistemaHeladeriaKivon
                     objetoUsuario.ImagenFotografia = foto;
                     objetoUsuario.Login = login;
                     objetoUsuario.Password = password;
+                    objetoUsuario.Activo = activo;
 
                     verificarModificacion = objManejadorUsuario.modificarUsuario(objetoUsuario, objetoUsuario.IdPersona);
 
@@ -203,6 +212,8 @@ namespace WFASistemaHeladeriaKivon
                 }
             }
         }//guarda los datos del usuario seleccionado anteriormente, si es que se realizaron cambios en el formulario
+
+        //FIN METODOS PRIMARIOS
         //==============================================================================================================
         //METODOS SECUNDARIOS
 
@@ -217,6 +228,13 @@ namespace WFASistemaHeladeriaKivon
                 Name = "idPersona",
                 HeaderText = "ID de Usuario",
                 DataPropertyName = "idPersona"
+            });
+
+            dtgListaUsuarios.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "NombreRol",
+                HeaderText = "Cargo",
+                DataPropertyName = "NombreRol"
             });
 
             dtgListaUsuarios.Columns.Add(new DataGridViewTextBoxColumn()

@@ -13,3 +13,9 @@ C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\
 C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\obj\Debug\Heladeria_1.formCliente.resources
 C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\obj\Debug\Heladeria_1.FormLogin.resources
 C:\Users\Carlos Alberto Ojeda\Documents\Visual Studio 2015\Projects\Heladeria 1\Heladeria 1\obj\Debug\Heladeria_1.FormOpcionesUsuario.resources
+C:\Users\TOSHIBA\Desktop\proyecto final_ADS1\Heladeria 1\Heladeria 1\bin\Debug\Heladeria 1.exe.config
+C:\Users\TOSHIBA\Desktop\proyecto final_ADS1\Heladeria 1\Heladeria 1\obj\Debug\Heladeria 1.exe
+C:\Users\TOSHIBA\Desktop\proyecto final_ADS1\Heladeria 1\Heladeria 1\obj\Debug\Heladeria 1.pdb
+C:\Users\TOSHIBA\Desktop\proyecto_ADS1\Heladeria 1\Heladeria 1\bin\Debug\Heladeria 1.exe.config
+C:\Users\TOSHIBA\Desktop\proyecto_ADS1\Heladeria 1\Heladeria 1\obj\Debug\Heladeria 1.exe
+C:\Users\TOSHIBA\Desktop\proyecto_ADS1\Heladeria 1\Heladeria 1\obj\Debug\Heladeria 1.pdb
