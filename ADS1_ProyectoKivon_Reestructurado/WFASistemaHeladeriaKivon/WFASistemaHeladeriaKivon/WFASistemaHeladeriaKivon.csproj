@@ -79,6 +79,12 @@
     <Compile Include="IUModificarUsuario.Designer.cs">
       <DependentUpon>IUModificarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="IUPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IUPedidos.Designer.cs">
+      <DependentUpon>IUPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="IUPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IUOpcionesUsuario.resx">
       <DependentUpon>IUOpcionesUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IUPedidos.resx">
+      <DependentUpon>IUPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IUPrincipal.resx">
       <DependentUpon>IUPrincipal.cs</DependentUpon>

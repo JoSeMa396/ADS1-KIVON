@@ -19,6 +19,7 @@ namespace WFASistemaHeladeriaKivon
         private IURegistrarUsuario IURegistrarUsuario = new IURegistrarUsuario();
         private IUModificarUsuario IUModificarUsuario = new IUModificarUsuario();
         private IUClientes IUClientes = new IUClientes();
+        private IUPedidos IUPedidos = new IUPedidos();
         //FIN VARIABLES
         //==============================================================================================================
         //METODOS PRIMARIOS
@@ -75,6 +76,17 @@ namespace WFASistemaHeladeriaKivon
                 IUClientes.Show();
         }
 
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (IUPedidos.IsDisposed == true)
+            {
+                IUPedidos = new IUPedidos();
+                IUPedidos.Show();
+            }
+            else
+                IUPedidos.Show();
+        }
+
         //FIN METODOS PRIMARIOS
         //==============================================================================================================
         //METODOS SECUNDARIOS
@@ -83,7 +95,6 @@ namespace WFASistemaHeladeriaKivon
         {
 
         }
-
         //FIN METODOS SECUNDARIOS
         //==============================================================================================================
     }
